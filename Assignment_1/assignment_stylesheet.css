@@ -36,20 +36,26 @@ nav a{
 
 /*Website's banner style.*/
 .banner_img{
-    /*position: relative;*/
-    height: 300px;
-    width: 100%;
-    background-image: url("Assets/header.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    position: relative;
     color: white;
     font-size: 34px;
     text-align: center;
-    background-blend-mode: darken;
-    background-attachment: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+
+/* Styling the banner's image */
+.banner_img img{
+    object-fit: cover;
+    height: 350px; 
+    width: 100%;
+}
+
+/* Styling the banner's text */
+.banner_img h1{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Style segment for available stock */
@@ -96,8 +102,6 @@ nav a{
 .thriple_Products{
     width: 90%;
     display: flex;
-    /*grid-template-areas: 31% 31% 31%;*/
-    /*grid-column-gap: 2.1%;*/
     align-items: center;
     margin: 0 auto;
     padding-bottom: 30px;
@@ -226,12 +230,14 @@ footer nav a{
 /*Styling font labels*/
 .Form label{
     font-weight: bold;
+    padding-right: 20px;
 }
 
 /*Syling for the messaging box*/
 #Message {
     position: relative;
-    bottom: 50px;   
+    bottom: 30px; 
+    padding-right: 5px;
 }
 
 /*Styling for the text area*/
@@ -242,4 +248,5 @@ input, textarea {
     width: 500px;
     width : 50%;
     margin: 0;
+    font-family: 'Lato', sans-serif;
 }
