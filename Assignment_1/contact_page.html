@@ -37,12 +37,12 @@
     <!--Form section-->
     <section class="Form">
     	<h1>PLEASE CONTACT US HERE</h1>
-    	<form>
+    	<form id="form1" onsubmit="return validate_text()" method="post">
     		<label>Name:</label>
-    		<input id="f_name" type="text" name="Name" placeholder="Enter your full name"><br><br>
+    		<input id="f_name" type="text" placeholder="Enter your full name"><br><br>
 
     		<label>Email:</label>
-    		<input type="Email" name="Email" placeholder="Enter your Email"><br><br>
+    		<input id="e_name" type="Email" name="Email" placeholder="Enter your Email"><br><br>
 
     		<label>Phone:</label>
     		<input type="phone" name="Phone" placeholder="Enter your phone number"><br><br>
@@ -50,7 +50,7 @@
     		<label id="Message">Message:</label>
     		<textarea placeholder="Please write your Message here"></textarea><br><br>
 
-    		<button>Send</button>
+    		<button type="submit" form = "form1" value="Submit">Send</button>
     	</form>
     </section>
 
