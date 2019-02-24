@@ -42,3 +42,41 @@ function validate_text() {
     alert("Form has been submitted");
     return true;
 }
+
+if ('querySelector' in document && 'addEventListener' in window){
+	console.log("I am here");
+    let readMoreBar = document.querySelectorAll(".show_more");
+    let wrapper = document.querySelectorAll(".thriple_Products .p_description");
+    let fullText;
+    let toggleButtonText;
+
+    [].forEach.call(wrapper, function (wrapper) {
+        wrapper.setAttribute('hidden', true);
+    });
+
+    [].forEach.call(readMoreBar, function (readMoreBar) {
+        readMoreBar.removeAttribute('hidden');
+    	// console.log("I got here too")
+
+
+        readMoreBar.addEventListener("click", function () {
+
+            wrapper = this.parentElement.querySelector('.p_description');
+            // readMoreBar = this.parentElement.querySelector('.')
+            toggleButtonText = this.querySelector('.text');
+    		// console.log("I got here too")
+
+            console.log(wrapper.hasAttribute('hidden'));
+            if (!wrapper.hasAttribute('hidden')){
+                toggleButtonText.innerText = "Show more";
+                wrapper.setAttribute('hidden', true);
+                readMoreBar.setAttribute('aria-expanded', false)
+            }
+            else {
+            	toggleButtonText.innerText = "Show less"
+                wrapper.removeAttribute('hidden')
+                readMoreBar.setAttribute('aria-expanded', true)
+            }
+        });
+    });
+}

@@ -101,7 +101,8 @@ nav a{
 /* Styling all the products in the thriple category */
 .thriple_Products{
     width: 90%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
     align-items: center;
     margin: 0 auto;
     padding-bottom: 30px;
@@ -142,8 +143,14 @@ nav a{
 /* Styling the triple products read more link */
 .thriple_Products a{
     text-decoration: none;
-    border: 2px solid gray;
+    /*border: 2px solid gray;*/
     padding: 6px 6px 6px 6px;
+}
+
+/* Styling for the button */
+.thriple_Products button{
+    height: 30px;
+    background-color: white;
 }
 
 /* unvisited link */
@@ -154,6 +161,10 @@ nav a{
 /* visited link */
 .thriple_Products a:visited {
   color: green;
+}
+
+.thriple_Products a:link{
+    color: black;
 }
 
 /* mouse over link */
@@ -167,10 +178,11 @@ nav a{
 }
 
 /* adding ectra padding to the thriple product's description */
-.thriple_Products .p_description{
+.thriple_Products .p_description, .thriple_Products p{
     padding-left: 5px;
     padding-right: 5px;
-}
+    padding-bottom: 15px;
+}   
 
 /* styling the order segment*/
 #Order{
