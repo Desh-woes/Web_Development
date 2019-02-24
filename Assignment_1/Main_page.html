@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<!-- Head section containing my stylesheet and web page title-->
 <head>
 	<title>Home Page</title>
 	<link rel="stylesheet" type="text/css" href="assignment_stylesheet.css">
@@ -20,7 +21,7 @@
         <div class="nav">
             <nav>
             <a id="current" href="#home">Welcome</a>
-            <a href="#About">About</a>
+            <a href="About_page.html">About</a>
             <a href="#Gallery">Gallery</a>
             <a href="contact_page.html">Contact</a>
             </nav>
@@ -63,7 +64,16 @@
                 <img class="product_image" src="Assets/boba.jpg">
 
                 <!--Product description-->
-                <div class="p_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                <!--Product description-->
+                <div id="Readmore1" class="p_description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+
+                <!--Read more link-->
+                <button aria-expanded="false" aria-controls="Readmore1" class="show_more" hidden><a href="#read_more2" class="text">Show More</a></button>
             </div>
 
             <!--Product 2 division Latta at Cohoa-->
@@ -77,7 +87,16 @@
                 <img class="product_image" src="Assets/coho-coffee.jpg">
 
                 <!--Product description-->
-                <div class="p_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                <!--Product description-->
+                <div id="Readmore3" class="p_description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+
+                <!--Read more link-->
+                <button aria-expanded="false" aria-controls="Readmore3" class="show_more" hidden><a href="#read_more1" class="text">Show More</a></button>
             </div>
         </div>
 
@@ -97,13 +116,16 @@
                 </div>
 
                 <!--Product images-->
-                <img class="product_image2" src="Assets/made.jpg">
-
-                <!--Product description-->
-                <div class="p_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-
-                <!--Read more link-->
-                <h1><a href="#Readmore1">Read More</a></h1>
+                <div class="container_image" id="container_image1" onmouseover="mouseon(this.id)" onmouseout="mouseout(this.id)">
+                    <img class="product_image2" src="Assets/made.jpg">
+                    <div class="overlay">
+                        <a href="#nowhere" class="text_fade">View Gallery</a>
+                    </div>
+                </div>
+                
+                <!--Short text description -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                
             </div>
 
             <!--Product 2 Division (Hand made products)-->
@@ -114,13 +136,15 @@
                 </div>
 
                 <!--Product images-->
-                <img class="product_image2" src="Assets/madeinrwanda.jpg">
+                <div class="container_image" id="container_image2" onmouseover="mouseon(this.id)" onmouseout="mouseout(this.id)">
+                    <img class="product_image2" src="Assets/madeinrwanda.jpg">
+                    <div class="overlay">
+                        <a href="#nowhere" class="text_fade">View Gallery</a>
+                    </div>
+                </div>
 
-                <!--Product description-->
-                <div class="p_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-
-                <!--Read more link-->
-                <h1><a href="#Readmore2">Read More</a></h1>
+                <!--Short text description -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
 
             <!--Product 3 Division (Things to do in Rwanda)-->
@@ -131,13 +155,15 @@
                 </div>
 
                 <!--Product images-->
-                <img class="product_image2" src="Assets/image7.jpg">
+                <div class="container_image" id="container_image3" onmouseover="mouseon(this.id)" onmouseout="mouseout(this.id)">
+                    <img class="product_image2" src="Assets/image7.jpg">
+                    <div class="overlay">
+                        <a href="#nowhere" class="text_fade">View Gallery</a>
+                    </div>
+                </div>
 
-                <!--Product description-->
-                <div class="p_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-
-                <!--Read more link-->
-                <h1><a href="#Readmore3">Read More</a></h1>
+                <!--Short text description -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
         </div>
 
@@ -161,7 +187,7 @@
         <div class="nav">
             <nav>
             <a href="#home">Welcome</a>
-            <a href="#About">About</a>
+            <a href="About_page.html">About</a>
             <a href="#Gallery">Gallery</a>
             <a href="contact_page.html">Contact</a>
             </nav>

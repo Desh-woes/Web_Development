@@ -49,6 +49,17 @@ nav a{
     width: 100%;
 }
 
+/* Styling for the about page banner */
+#about_banner img{
+    height: 250px;
+}
+
+
+/* Styling for the about page banner text */
+#about_banner h1{
+    font-size: 70px;
+}
+
 /* Styling the banner's text */
 .banner_img h1{
     width: 100%;
@@ -84,7 +95,7 @@ nav a{
     width: 90%;
     margin: 0 auto;
     padding-top: 25px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
 }
 
 /* Styling all the products in the double item category */
@@ -94,6 +105,7 @@ nav a{
     grid-template-columns: 47.5% 47.5%;
     grid-column-gap: 5%; 
     align-items: center;
+    padding-bottom: 20px;
     margin: 0 auto;
     
 }
@@ -136,53 +148,88 @@ nav a{
 
 /*Styling for all product description*/
 .p_description{
-    padding-bottom: 50px;
     font-weight: lighter;
 }
 
 /* Styling the triple products read more link */
-.thriple_Products a{
+.double_Products a{
     text-decoration: none;
     /*border: 2px solid gray;*/
     padding: 6px 6px 6px 6px;
 }
 
 /* Styling for the button */
-.thriple_Products button{
+.double_Products button{
     height: 30px;
     background-color: white;
 }
 
-/* unvisited link */
-.thriple_Products a:link {
-  color: red;
-}
 
 /* visited link */
-.thriple_Products a:visited {
+.double_Products a:visited {
   color: green;
 }
 
-.thriple_Products a:link{
+/* unvisited link */
+.double_Products a:link{
     color: black;
 }
 
 /* mouse over link */
-.thriple_Products a:hover {
+.double_Products a:hover {
   color: hotpink;
 }
 
 /* selected link */
-.thriple_Products a:active {
+.double_Products a:active {
   color: blue;
 }
 
 /* adding ectra padding to the thriple product's description */
-.thriple_Products .p_description, .thriple_Products p{
+.p_description, .thriple_Products p, .double_Products p{
     padding-left: 5px;
     padding-right: 5px;
-    padding-bottom: 15px;
+    padding-bottom: 12px;
 }   
+
+/* Styling for container Image*/
+.container_image {
+    position: relative;
+    transition: 2s ease;
+}
+
+/* Styling for overlying box under the container image*/
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center; 
+    background-color: rgb(173,216,230);
+    height: 180px;
+    width: 300px;
+    opacity: 0;
+    transition: 2s ease;
+     
+}
+
+/* Styling for gallary page link on the overlying box */
+.text_fade {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgb(105, 105, 105) linear-gradient(gray, white);
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+}
 
 /* styling the order segment*/
 #Order{
@@ -261,4 +308,142 @@ input, textarea {
     width : 50%;
     margin: 0;
     font-family: 'Lato', sans-serif;
+}
+
+/* Styling for the About us page */
+/* Our story segment */
+.our_story{
+    text-align: center;
+    font-family: 'proxima-nova', sans-serif;
+    font-size: 20px;
+    width: 50%;
+    margin: 0 auto;
+    color: #4D5656;
+    font-weight: lighter;
+    align-content: center;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.our_story h2{
+    font-size: 50px;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.our_story h3{
+    font-weight: bold;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.red-border{
+    width: 60%;
+    border-bottom: 1px solid #d2282e;
+    height: 16px;
+    margin: 0 auto;
+    padding-top: 10px;
+
+}
+
+.our_story p{
+    padding-top: 25px;
+    color: black;
+    font-family: 'Lato', sans-serif;
+}
+
+.Value_proposition, .team_members{  
+    padding-bottom: 30px;
+}
+
+.core_values{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    margin: 0 auto;
+    /*align-content: center;*/
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.core_values p{
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 25px;
+}
+
+.Value_proposition button{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    line-height: 30px;
+    background: rgb(105, 105, 105) linear-gradient(gray, white);
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 550;
+    color: #B22222;
+}
+
+.value_icon{
+    max-height: 100px;
+    max-width: 200px;
+    padding-top: 20px;
+    padding-bottom: 25px;
+}
+
+.strike {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap; 
+    width: 90%;
+    margin: 0 auto;
+    color: #4D5656;
+    font-family: 'proxima-nova', sans-serif;
+    font-size: 35px;
+    padding: 15px 0px 15px 0px;
+
+}
+
+.strike > span {
+    position: relative;
+}
+
+.strike > span:before,
+.strike > span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 1px;
+    background: red;
+}
+
+.strike > span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.strike > span:after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+.team_members img{
+    border-radius: 50%;
+}
+
+.team_members .member{
+    font-size: 20px;
+    word-spacing: 5px;
+}
+
+.team_members .member h1{
+    font-weight: bold;
+    font-size: 25px;
+    padding-bottom: 15px;
 }
