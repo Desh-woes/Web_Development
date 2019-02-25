@@ -105,8 +105,8 @@ let toggleButtonText;
             readMoreBar.setAttribute('aria-expanded', false)
         }
         else {
-           	toggleButtonText.innerText = "Show less"
-            wrapper.removeAttribute('hidden')
+           	toggleButtonText.innerText = "Show less";
+            wrapper.removeAttribute('hidden');
             readMoreBar.setAttribute('aria-expanded', true)
         }
     });
@@ -130,7 +130,7 @@ function mouseout(id) {
     overlay.style.opacity = 0;
 }
 
-// Creating another slideshow for the About page to control the Our team area
+// Creating another sideshow for the About page to control the Our team area
 let iterator2 = 0;
 
 // Images list containing image file paths that would be used for our slide show
@@ -138,18 +138,18 @@ let images_list = ['Assets/Professional.png', 'Assets/professional1.jfif'];
 let names_list = ['Adesina Oluwarotimi E', 'Oluwarotimi E. Adesina']
 let desc_list = ['Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 'Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph.']
 
-// Varaiable to keep track of time intervals at which our images would be changing (3 seconds)
+// Variable to keep track of time intervals at which our images would be changing (3 seconds)
 let time2 = 5000;
 
-// Element variable contianing our banner image property
+// Element variable containing our banner image property
 let img_element = document.querySelector(".team_members img");
 
-let name_element = document.querySelector(".team_members .member h1")
-console.log(name_element)
+let name_element = document.querySelector(".team_members .member h1");
+console.log(name_element);
 
-let desc_element = document.querySelector(".team_members .member p")
+let desc_element = document.querySelector(".team_members .member p");
 
-// Slideshow function that changes the banner image source once called
+// Sideshow function that changes the banner image source once called
 function slide_show2() {
     // Set img src to the value of the image at iterator.
     img_element.src = images_list[iterator2];
@@ -158,14 +158,14 @@ function slide_show2() {
 
     // Update iterator
     if (iterator2 < images_list.length - 1){
-        iterator2++
+        iterator2++;
     } else {
-        iterator2 = 0
+        iterator2 = 0;
     }
 
     // Call function once time is due.
     setTimeout("slide_show2()", time2);
 }
 
-// Executes the slideshow function as soon as the page is loaded.
+// Executes the sideshow function as soon as the page is loaded.
 window.onload = slide_show2();

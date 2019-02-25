@@ -325,6 +325,7 @@ input, textarea {
     padding-bottom: 30px;
 }
 
+/* Styling for the h2 elements in the our_story class */
 .our_story h2{
     font-size: 50px;
     font-weight: bold;
@@ -333,12 +334,14 @@ input, textarea {
     padding-bottom: 10px;
 }
 
+/* Styling for the h3 elements in the our_story class */
 .our_story h3{
     font-weight: bold;
     font-size: 15px;
     font-style: italic;
 }
 
+/* Styling for the red line immediately under the What drives us */
 .red-border{
     width: 60%;
     border-bottom: 1px solid #d2282e;
@@ -348,16 +351,19 @@ input, textarea {
 
 }
 
+/* Styling for the our story segment */
 .our_story p{
     padding-top: 25px;
     color: black;
     font-family: 'Lato', sans-serif;
 }
 
+/* Padding for the value proposition and team members segment */
 .Value_proposition, .team_members{  
     padding-bottom: 30px;
 }
 
+/* Styling for the values icons */
 .core_values{
     width: 90%;
     display: grid;
@@ -369,12 +375,14 @@ input, textarea {
     align-items: center;
 }
 
+/* Styling for the value descriptions */
 .core_values p{
     width: 90%;
     margin: 0 auto;
     padding-bottom: 25px;
 }
 
+/* Styling for the learn more button */
 .Value_proposition button{
     display: flex;
     text-align: center;
@@ -388,6 +396,7 @@ input, textarea {
     color: #B22222;
 }
 
+/* Styling for the value icon images */
 .value_icon{
     max-height: 100px;
     max-width: 200px;
@@ -395,6 +404,7 @@ input, textarea {
     padding-bottom: 25px;
 }
 
+/*Styling for the text between the red lines*/
 .strike {
     display: block;
     text-align: center;
@@ -409,10 +419,12 @@ input, textarea {
 
 }
 
+/* Styling for the red line span */
 .strike > span {
     position: relative;
 }
 
+/* Styling for the red line span */
 .strike > span:before,
 .strike > span:after {
     content: "";
@@ -423,25 +435,30 @@ input, textarea {
     background: red;
 }
 
+/* Styling for the red line span */
 .strike > span:before {
     right: 100%;
     margin-right: 15px;
 }
 
+/* Styling for the red line span */
 .strike > span:after {
     left: 100%;
     margin-left: 15px;
 }
 
+/* Styling for the team member image */
 .team_members img{
     border-radius: 50%;
 }
 
+/* Styling for the team member's name*/
 .team_members .member{
     font-size: 20px;
     word-spacing: 5px;
 }
 
+/* Styling for the team member's description*/
 .team_members .member h1{
     font-weight: bold;
     font-size: 25px;
