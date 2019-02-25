@@ -464,3 +464,87 @@ input, textarea {
     font-size: 25px;
     padding-bottom: 15px;
 }
+
+/* Styling for the procuct card */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: arial;
+}
+
+/* Styling for the price tag*/
+.price {
+  color: #606060;
+  font-size: 25px;
+}
+/* Styling for the card image */
+.card img{
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    padding-bottom: 20px;
+}
+
+.card h1{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 20px;   
+
+}
+
+.card p{
+    font-family: 'Lato', sans-serif;
+    /*font-style: italic;*/
+}
+
+/*Styling for the purchase button*/
+.card button {
+  border: none;
+  /*outline: 0;*/
+  padding: 12px;
+  color: white;
+  background-color: #606060;
+  text-align: center;
+  /*cursor: pointer;*/
+  width: 100%;
+  font-size: 18px;
+}
+
+/*On-hover styling for the button*/
+.card button:hover {
+  opacity: 0.7;
+}
+
+/* Styling for the gallery products*/
+.gallery_products, .gallery_products .core_values{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* Styling for the navidation bar at the buttom of the page*/
+.pagination {
+  display: flex;
+  width: 40%;
+  margin: 0 auto;   
+  padding-bottom: 30px;
+}
+
+/* Styling for the navidation bar at the buttom of the page*/
+.pagination a {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+/* Styling for the navidation bar at the buttom of the page*/
+.pagination a.active {
+  background-color: #B22222;
+  color: white;
+}
+
+/* Styling for the navidation bar at the buttom of the page*/
+.pagination a:hover:not(.active) {background-color: #ddd;}
