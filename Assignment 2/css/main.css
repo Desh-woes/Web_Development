@@ -1,0 +1,148 @@
+/*Styling for elements in the header*/
+header {
+	background-color: #041221;
+    margin: 0;
+    display: grid;
+    padding: 10px 20px 10px 20px;
+    grid-template-columns: 55% 45%;
+    
+}
+
+/*Styling for the logo image*/
+header img{
+	max-width: 80px;
+	max-height: 92px;
+}
+
+/*Styling for the navigation bar*/
+nav{
+	text-align: right;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%); 
+}
+
+/*Styling for the link texts in the navigation bar*/
+nav a{
+	width: 150px;
+	height: 31px;
+	padding: 5px 50px 0px 0px;
+	font-family: PT Sans;
+	font-size: 24px;
+	color: white;
+	text-decoration: none solid rgb(255, 255, 255);
+	text-align: center;
+}
+
+/*Styling for the background div*/
+.background{
+	position: relative;
+}
+
+/*Styling for image on the homepage background*/
+.background img{
+	object-fit: cover;
+	height: 530px;
+	width: 100%
+}
+
+/*Styling for the shade on the background image*/
+.shade{
+	width: 100%;
+    height: 530px;
+    background: rgba(88,151,251,0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+/*Styling for div content in the shade*/
+.shade div{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/*Styling for the h1 tag in the shade containing the text*/
+.shade div h1{
+	width: 453px;
+	height: 130px;
+	font-family: PT Sans;
+	font-size: 50px;
+	color: #ffffff;
+	text-decoration: none solid rgb(255, 255, 255);
+	text-align: center;
+	margin: auto;
+	margin-bottom: 12px;
+}
+
+/*Styling for the link button in the shade.*/
+.shade div button{
+	width: 156px;
+	height: 44px;
+	padding: 6px 10px;
+	background-color: #3498db;
+	font-family: PT Sans;
+	font-size: 20px;
+	color: #ffffff;
+	text-decoration: none solid rgb(255, 255, 255);
+	text-align: center;
+}
+
+/*Styling for the div containing reccomendations*/
+.reccomendation{
+	display: flex;
+	position: relative;
+	background-color: #ebebeb;
+	/*margin:0 auto;*/
+	/*border: 1px solid black;*/
+}
+
+/*Styling for the images of people who reccomend*/
+.reccomendation img{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	padding: 5px 50px 10px 50px;
+}
+
+/*Styling for the div containing the reccomendations*/
+.reccomendation div{
+	width: 875px;
+	height: 200px;
+	font-family: PT Sans;
+	font-size: 20px;
+	color: #000000;
+	text-decoration: none solid rgb(0, 0, 0);
+	
+}
+
+/*Styling for the footer container*/
+footer{
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 60% 40%;
+	position: relative;
+	background-color: #342f3c;
+	padding-left: 50px;
+	font-family: PT Sans;
+}
+
+/*Styling for the H5 element in the footer*/
+footer h5{
+	/*font-family: PT Sans;*/
+	font-size: 14px;
+	font-weight: normal;
+	color: #ffffff;
+	text-decoration: none solid rgb(255, 255, 255);
+}
+
+/*Styling for the navigation bar in the footer*/
+footer nav a{
+	font-size: 16px;
+	color: #ffffff;
+	text-decoration: none solid rgb(255, 255, 255);
+	text-align: center;
+}
+
