@@ -1,3 +1,9 @@
+/*Styling for html body to allow content ocupy the full screen*/
+body {
+	margin: 0 auto;
+	/*padding-left: 20px;*/
+}
+
 /*Styling for elements in the header*/
 header {
 	background-color: #041221;
@@ -26,9 +32,9 @@ nav{
 nav a{
 	width: 150px;
 	height: 31px;
-	padding: 5px 50px 0px 0px;
-	font-family: PT Sans;
-	font-size: 24px;
+	padding: 5px 50px 0 0;
+	font-family: PT Sans, serif;
+	font-size: 20px;
 	color: white;
 	text-decoration: none solid rgb(255, 255, 255);
 	text-align: center;
@@ -68,13 +74,12 @@ nav a{
 .shade div h1{
 	width: 453px;
 	height: 130px;
-	font-family: PT Sans;
+	font-family: PT Sans, serif;
 	font-size: 50px;
 	color: #ffffff;
 	text-decoration: none solid rgb(255, 255, 255);
 	text-align: center;
-	margin: auto;
-	margin-bottom: 12px;
+	margin: auto auto 12px;
 }
 
 /*Styling for the link button in the shade.*/
@@ -83,7 +88,7 @@ nav a{
 	height: 44px;
 	padding: 6px 10px;
 	background-color: #3498db;
-	font-family: PT Sans;
+	font-family: PT Sans, serif;
 	font-size: 20px;
 	color: #ffffff;
 	text-decoration: none solid rgb(255, 255, 255);
@@ -95,8 +100,6 @@ nav a{
 	display: flex;
 	position: relative;
 	background-color: #ebebeb;
-	/*margin:0 auto;*/
-	/*border: 1px solid black;*/
 }
 
 /*Styling for the images of people who reccomend*/
@@ -111,7 +114,7 @@ nav a{
 .reccomendation div{
 	width: 875px;
 	height: 200px;
-	font-family: PT Sans;
+	font-family: PT Sans, serif;
 	font-size: 20px;
 	color: #000000;
 	text-decoration: none solid rgb(0, 0, 0);
@@ -126,7 +129,7 @@ footer{
 	position: relative;
 	background-color: #342f3c;
 	padding-left: 50px;
-	font-family: PT Sans;
+	font-family: PT Sans, serif;
 }
 
 /*Styling for the H5 element in the footer*/
@@ -146,3 +149,69 @@ footer nav a{
 	text-align: center;
 }
 
+/*Styling for the "Availabel courses" text*/
+body h3{
+	font-family: PT Sans, serif;
+	font-size: 24px;
+	color: #424242;
+	margin-left: 50px;
+}
+
+/*Styling for the course section section.*/
+.courseSec{
+	margin-left: 50px;
+	display: flex;
+	width: 85%;
+	font-family: PT Sans, serif;
+	color: #424242;
+	margin-bottom: 50px;
+	position: relative;
+}
+
+/*Styling for course button in the course section*/
+.courseSec button{
+	width: 156px;
+	height: 44px;
+	padding: 6px 10px;
+	background-color: #3498db;
+	font-family: PT Sans, serif;
+	font-size: 20px;
+	color: #ffffff;
+	margin-top: 50px;
+}
+
+/*Styling for the course card in the course section*/
+.courseCard img{
+	width: 300px;
+	height: 150px;
+	object-fit: cover;
+	margin-right: 30px;
+}
+
+/*Styling for contents in the course card*/
+.courseCard{
+	display: flex;
+	margin-right: 30px;
+	background-color: #ebebeb;
+	padding-right: 15px;
+}
+
+/*Styling for h1 element in the course card*/
+.courseCard h1{
+	font-size: 32px;
+	margin-top: 15px;
+	margin-bottom: 7px;
+
+}
+
+/*Styling h3 element in the course card*/
+.courseCard h3{
+	margin: 0 auto;
+	font-size: 24px;
+}
+
+/*Styling for p element in the course card*/
+.courseCard p{
+	margin: 0 auto;
+	font-size: 18px;
+}
