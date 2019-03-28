@@ -215,3 +215,103 @@ body h3{
 	margin: 0 auto;
 	font-size: 18px;
 }
+
+/*Styling for introduction on the course dashboard page*/
+.introduction{
+	margin-left: 50px;
+	margin-top: 20px;
+	margin-bottom: 15px;
+	font-family: PT Sans, serif;
+	color: #424242;
+}
+
+/*Styling for the h1 text in the introduction section*/
+.introduction h1{
+	font-size: 24px;
+	margin: 0 auto;
+}
+
+/*Styling for the h4 text in the introduction section*/
+.introduction h4{
+	font-size: 18px;
+	font-weight: lighter;
+	margin: 0 auto;
+}
+
+/*Styling for the course details box in the course dashboard*/
+.courseDetails{
+	margin-bottom: 15px;
+	margin-left: 50px;
+	width: 85%;
+	height: 406px;
+	background-color: #ebebeb;
+	box-shadow: inset 0 0 2px 3px rgba(0,0,0,0.2);
+	padding: 10px 40px 0 40px;
+	font-family: PT Sans, serif;
+	color: #424242;
+}
+
+/*Styling for the description paragraph in the course details box*/
+.courseDetails p{
+	font-size: 18px;
+}
+
+/*Styling for the instruction div*/
+.instruction{
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+/*Styling for the text in the instruction div*/
+.instruction h4{
+	margin-bottom: 15px;
+	margin-top: 0;
+}
+
+/*Styling for the test link containers*/
+.testLinks{
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+.testLinks{
+	margin-bottom: 0;
+}
+
+/*Styling for buttons that lead to the tests*/
+.testButton button{
+	display: flex;
+	margin-bottom: 15px;
+	width: 422px;
+	height: 44px;
+	padding: 6px 10px;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+	background-color: #3498db;
+	font-family: PT Sans, serif;
+	font-size: 20px;
+	color: #ffffff;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2), inset 0 1px 2px rgba(0,0,0,0.2);
+}
+
+/*Styling for the lecturer's details container*/
+.lecturer{
+	margin-bottom: 0;
+	display: flex;
+	position: relative;
+}
+
+/*Styling for the lecturer's image*/
+.lecturer img{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+
+/*Styling for text containing lecturer's details*/
+.lecturer h3{
+	position: relative;
+	top: 60%;
+	transform: translateY(-40%);
+	font-size: 18px;
+}
