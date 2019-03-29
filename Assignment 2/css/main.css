@@ -321,11 +321,14 @@ body h3{
 .Form{
 	color: #424242;
 	border: 1px solid black;
-    width: 100%;
+    /*width: 100%;*/
     background-color: #eff0f8;
     text-align: center;
     padding-bottom: 20px;
-	font-family: PT Sans, serif;  
+	font-family: PT Sans, serif; 
+	margin-bottom: 50px; 
+	margin: 0 auto;
+	padding-bottom: 70px;
 }
 
 /*Styling for text in form*/
