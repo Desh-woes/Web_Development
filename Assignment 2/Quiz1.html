@@ -3,10 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Title</title>
-
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	<script src="js/main.js"></script>
+	<title>Quiz 1 || Multiple choice</title>
 </head>
 <body>
+	<!-- Section for the header containing the logo and navigation links-->
+	<header class="header">
+		<!--Div containing logo-->
+		<div>
+			<img src="Images/logo.png" alt="Brand Logo">
+		</div>
 
+		<!--Navigation links in the header-->
+		<div class="navigation">
+			<nav>
+				<a href="Home_page.html">Home Page</a>
+				<a href="View_courses.html">View Courses</a>
+				<a href="Contact_page.html">Contact Us</a>
+			</nav>
+		</div>
+	</header>
+
+	<!-- Section containing the quizes -->
+    <section class="quizContainer">
+
+    	<!-- Div containing the quiz title -->
+        <div id="quizTitle">
+        	<h1>Test your understanding of Recursion</h1>
+        </div>
+
+        <!-- Paragraph containing instructions for the quiz -->
+        <p><b>Instructions:</b> This quiz would allow you select only one response which you believe answers the question asked best.</p>
+
+        <!-- Div containing quiz form and solution -->
+        <div class="kwiz">
+        	<form class="quizForm">
+	        	<!-- Div containing one quiz question -->
+	        	<div>
+	        		<p>What is Recursion?</p>
+		        	<input type="radio" name="question1" value="Recursion is a word coined by Mehdi">Recursion is a word coined by Mehdi<br>
+		        	<input type="radio" name="question1" value="Recursion is a word coined by Mehdi">Recursion is a word coined by Mehdi<br>
+		        	<input type="radio" name="question1" value="Recursion is a word coined by Mehdi">Recursion is a word coined by Mehdi<br>
+		        	<input type="radio" name="question1" value="Recursion is a word coined by Mehdi">Recursion is a word coined by Mehdi<br>
+	        	</div>
+	        	
+	        	<!-- Div containing one quiz question -->
+	        	<div>
+	        		<p>What is Recursion?</p>
+		        	<input type="radio" name="question2" value="Recursion is a word coined by Mehdi">Recursion is a word coined by Mehdi<br>
+		        	<input type="radio" name="question2" value="Recursion is a word coined by Mehdi">Recursion is a word coined by Mehdi<br>
+		        	<input type="radio" name="question2" value="Recursion is a word coined by Mehdi">Recursion is a word coined by Mehdi<br>
+		        	<input type="radio" name="question2" value="Recursion is a word coined by Mehdi">Recursion is a word coined by Mehdi<br>
+	        	</div>
+	        	
+	        	<!-- Div containing one quiz question -->
+	        	<div>
+	        		<p>What is Recursion?</p>
+		        	<input type="radio" name="question3" value="Recursion is a word coined by Mehdi">Recursion is a word coined by Mehdi<br>
+		        	<input type="radio" name="question3" value="Recursion is a word coined by Mehdi">Recursion is a word coined by Mehdi<br>
+		        	<input type="radio" name="question3" value="Recursion is a word coined by Mehdi">Recursion is a word coined by Mehdi<br>
+		        	<input type="radio" name="question3" value="Recursion is a word coined by Mehdi">Recursion is a word coined by Mehdi<br>
+	        	</div>
+	        	
+	        	<!-- Div containing one quiz question -->
+	        	<div>
+	        		<p>What is Recursion?</p>
+		        	<input type="radio" name="question4" value="Recursion is a word coined by Mehdi">Recursion is a word coined by Mehdi<br>
+		        	<input type="radio" name="question4" value="Recursion is a word coined by Mehdi">Recursion is a word coined by Mehdi<br>
+		        	<input type="radio" name="question4" value="Recursion is a word coined by Mehdi">Recursion is a word coined by Mehdi<br>
+		        	<input type="radio" name="question4" value="Recursion is a word coined by Mehdi">Recursion is a word coined by Mehdi<br>
+	        	</div>
+	        	
+	        	<!-- Div containing one quiz question -->
+	        	<div>
+	        		<p>What is Recursion?</p>
+		        	<input type="radio" name="question5" value="Recursion is a word coined by Mehdi">Recursion is a word coined by Mehdi<br>
+		        	<input type="radio" name="question5" value="Recursion is a word coined by Mehdi">Recursion is a word coined by Mehdi<br>
+		        	<input type="radio" name="question5" value="Recursion is a word coined by Mehdi">Recursion is a word coined by Mehdi<br>
+		        	<input type="radio" name="question5" value="Recursion is a word coined by Mehdi">Recursion is a word coined by Mehdi<br>
+	        	</div>
+	        	
+	        	<!-- Div containing one quiz question -->
+	        	<div>
+	        		<p>What is Recursion?</p>
+		        	<input type="radio" name="question6" value="Recursion is a word coined by Mehdi">Recursion is a word coined by Mehdi<br>
+		        	<input type="radio" name="question6" value="Recursion is a word coined by Mehdi">Recursion is a word coined by Mehdi<br>
+		        	<input type="radio" name="question6" value="Recursion is a word coined by Mehdi">Recursion is a word coined by Mehdi<br>
+		        	<input type="radio" name="question6" value="Recursion is a word coined by Mehdi">Recursion is a word coined by Mehdi<br>
+	        	</div>
+
+	        	<input type="button" id="button" name="Submit" value="Submit">
+
+	        </form>
+
+	        <div class="result">
+	        	<h4>Score: 4/5</h4>
+	        	<h4>Percentage: 90%</h4>
+	        	<h4>Message: You did a good job</h4>
+	        	<button>View Courses</button>
+	        </div>
+        </div>
+    </section>
+
+
+    <!-- Footer section containing navigation links and additional details-->
+	<footer>
+		<h5>WEB DEVELOPMENT 2019 &#0169</h5>
+
+		<div>
+			<nav>
+				<a href="Home_page.html">Home Page</a>
+				<a href="View_courses.html">View Courses</a>
+				<a href="Contact_page.html">Contact Us</a>
+			</nav>
+		</div>
+	</footer>
 </body>
 </html>

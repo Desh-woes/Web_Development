@@ -350,11 +350,102 @@ body h3{
 }
 
 /*Styling for the text area*/
-input, textarea {
+#form1 input, #form1 textarea {
     padding: 15px;
     border-radius: 5px;
     border: 0;
 	width : 50%;
     margin: 0;
     font-family: 'Lato', sans-serif;
+}
+
+/*Styling for the quiz container*/
+.quizContainer{
+	margin-left: 50px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border-radius: 10px;
+	width: 85%;
+	background-color: #ebebeb;
+	padding: 20px 30px 20px 40px;
+	box-shadow: inset 0 0 2px 3px rgba(0,0,0,0.2);
+	font-family: PT Sans, serif;
+}
+
+/*Styling for the quiz title*/
+#quizTitle{
+	padding: 6px 10px;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+	background-color: #3498db;
+	font-size: 16px;
+	color: #ffffff;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2), inset 0 1px 2px rgba(0,0,0,0.2);
+}
+
+/*Styling for the H1 element in the quiz*/
+#quizTitle h1{
+	margin: 0 auto;
+}
+
+/*Styling for the questions and input text in the quiz form*/
+.quizForm div{
+	margin-bottom: 20px;
+	padding-right: 20px
+}
+
+/*Styling for question in the quiz*/
+.quizForm p{
+	font-size: 18px;
+	color: #424242;
+	font-weight: 600;
+}
+
+/*Styling to give space between the quiz options*/
+.quizForm input{
+	margin-bottom: 10px;
+}
+
+/*Styling for the quiz submit button*/
+#button{
+	width: 308px;
+	padding: 6px 10px;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+	background-color: #3498db;
+	font-family: PT Sans, serif;
+	font-size: 20px;
+	color: #ffffff;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2), inset 0 1px 2px rgba(0,0,0,0.2);
+}
+
+/*Styling for the division containing the form and response*/
+.kwiz{
+	display: grid;
+	grid-template-columns: 70% 30%;
+	font-family: PT Sans, serif;
+	color: #424242;
+}
+
+/*Styling for h3 elements in the kwiz division*/
+.kwiz h3{
+	margin: 0 auto;
+}
+
+/*Styling for the result box*/
+.result{
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2), inset 0 1px 2px rgba(0,0,0,0.2);
+	align-self: flex-end;
+	padding: 10px 20px 10px 20px;
+	background-color: #c7c7c7;
+}
+
+/*Styling for the result box button*/
+.result button{
+	padding: 6px 10px;
+	background-color: #3498db;
+	font-family: PT Sans, serif;
+	font-size: 18px;
+	color: #ffffff;
+	text-align: center;
 }
