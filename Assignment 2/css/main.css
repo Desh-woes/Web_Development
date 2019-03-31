@@ -389,10 +389,10 @@ body h3{
 }
 
 /*Styling for the questions and input text in the quiz form*/
-.quizForm div{
-	margin-bottom: 20px;
-	padding-right: 20px
-}
+/*.quizForm div{*/
+	/*margin-bottom: 20px;*/
+	/*padding-right: 20px*/
+/*}*/
 
 /*Styling for question in the quiz*/
 .quizForm p{
@@ -428,9 +428,9 @@ body h3{
 }
 
 /*Styling for h3 elements in the kwiz division*/
-.kwiz h3{
-	margin: 0 auto;
-}
+/*.kwiz h3{*/
+	/*margin: 0 auto;*/
+/*}*/
 
 /*Styling for the result box*/
 .result{
@@ -470,11 +470,15 @@ body h3{
 	box-shadow: 0 1px 2px rgba(0,0,0,0.2), inset 0 1px 2px rgba(0,0,0,0.2);
 }
 
+/*Styling for the question and mark division which holds the quiz question and the image to show if the question was
+answered correctly or not*/
 .question_mark{
 	display: flex;
 	position: relative;
+    /*margin: 0 auto;*/
 }
 
+/*Styling for the marker that shows if the question has been answered correctly*/
 .question_mark img{
 	display: none;
 	max-width: 30px;
