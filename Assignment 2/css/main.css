@@ -438,6 +438,12 @@ body h3{
 	align-self: flex-end;
 	padding: 10px 20px 10px 20px;
 	background-color: #c7c7c7;
+	display: none;
+	position: fixed;
+	height: 210px;
+	width: 270px;
+	left: 65vw;
+	top: 50vh;
 }
 
 /*Styling for the result box button*/
@@ -448,4 +454,31 @@ body h3{
 	font-size: 18px;
 	color: #ffffff;
 	text-align: center;
+}
+
+/*Styling for the submit button in quiz 2*/
+.button2{
+	width: 70px;
+	padding: 6px 10px;
+	margin-top: 15px;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+	background-color: #3498db;
+	font-family: PT Sans, serif;
+	font-size: 15px;
+	color: #ffffff;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2), inset 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.question_mark{
+	display: flex;
+	position: relative;
+}
+
+.question_mark img{
+	display: none;
+	max-width: 30px;
+	max-height: 30px;
+	margin-top: 15px;
+	margin-left: 10px;
 }
