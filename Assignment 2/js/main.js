@@ -129,7 +129,7 @@ function check_response2(name){
     document.querySelector("#" + name + " .button2").style.backgroundColor = "#c7c7c7";
 
     // Display the result tab if all questions have been answered.
-    if (Q_2_ans == 6) {
+    if (Q_2_ans === 6) {
     	display_result(correct_ans);
     }
 }
