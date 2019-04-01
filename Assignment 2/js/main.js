@@ -100,22 +100,24 @@ function check_response2(name){
 
     // Check if the answer is correct.
     else if(curr_question_val.value === question_answer[name][0]){
-        let para = document.createElement("P");
-        let t = document.createTextNode("You got it right! :)");
-        para.appendChild(t);
-        para.style.color = "#30c741";
-        document.getElementById(name).appendChild(para);
+        // let para = document.createElement("P");
+        // let t = document.createTextNode("You got it right! :)");
+        // para.appendChild(t);
+        // para.style.color = "#30c741";
+        // document.getElementById(name).appendChild(para);
+        generate_correct(name);
         Q_img.src = "Images/tick.png";
         correct_ans++;
     }
 
     // Check if the answer is incorrect and display the neccesary feedback.
     else if(curr_question_val.value !== question_answer[name][0]){
-    	let para = document.createElement("P");
-        let t = document.createTextNode(question_answer[name][2]);
-        para.appendChild(t);
-        para.style.color = "#c73a26";
-        document.getElementById(name).appendChild(para);
+    	// let para = document.createElement("P");
+        // let t = document.createTextNode(question_answer[name][2]);
+        // para.appendChild(t);
+        // para.style.color = "#c73a26";
+        // document.getElementById(name).appendChild(para);
+        generate_wrong(name, question_answer);
     }
 
     // Increase the number of questions answered
@@ -131,5 +133,136 @@ function check_response2(name){
     // Display the result tab if all questions have been answered.
     if (Q_2_ans === 6) {
     	display_result(correct_ans);
+    }
+}
+
+// Function to generate feedback when the given answer is correct
+function generate_correct(name) {
+    let para = document.createElement("P");
+    let t = document.createTextNode("You got it right! :)");
+    para.appendChild(t);
+    para.style.color = "#30c741";
+    document.getElementById(name).appendChild(para);
+}
+
+// Function to generate feedback when the given answer is wrong
+function generate_wrong(name, question_answer) {
+    let para = document.createElement("P");
+    let t = document.createTextNode(question_answer[name][2]);
+    para.appendChild(t);
+    para.style.color = "#c73a26";
+    document.getElementById(name).appendChild(para);
+}
+
+// Generate slider output for quiz 3
+function updateTextInput(val) {
+    document.getElementById('textInput').value = "Slider value: " + val;
+}
+
+// Dictionary containing the answers in quiz3
+question_answer2 = {
+	Q1 : ["41", "question1", "Sorry that was the wrong option. The correct option is a because Timi created it"],
+	Q2 : ["volvo", "question2", "Sorry that was the wrong option. The correct option is a because desh created it"],
+	Q3 : ["Slider value: 50", "question3", "Sorry that was the wrong option. The correct option is a because woes created it"],
+	Q4 : ["Emelyne", "question4", "Sorry that was the wrong option. The correct option is a because shina created it"],
+	Q5 : [["a", "b"], "question5", "Sorry that was the wrong option. The correct option is a because peters created it"],
+	Q6 : ["b", "question6", "Sorry that was the wrong option. The correct option is a because emelyne created it"]
+};
+
+// Function to check responses for the third quiz.
+function check_response3(id_val){
+    // Get Question mark image i.e tick and cancel images respectively
+    let Q_img = document.querySelector("#"+id_val+ " img");
+
+	if (id_val === "Q1") {
+	    let response = document.getElementById("number_picker");
+	    console.log(response.value);
+        if (response.value === ""){
+            alert("Fill in the answer before submitting");
+            return;
+        }
+
+        else if (response.value === question_answer2[id_val][0]){
+            generate_correct(id_val);
+            Q_img.src = "Images/tick.png";
+            // correct_ans++;
+        }
+
+        else if (response.value !== question_answer2[id_val][0]){
+            generate_wrong(id_val, question_answer2);
+        }
+	}
+
+	else if (id_val === 'Q2') {
+        let response = document.getElementById("dropdown");
+        console.log(response.value);
+
+        if (response.value === ""){
+            alert("Fill in the answer before submitting");
+            return;
+        }
+
+        else if (response.value === question_answer2[id_val][0]){
+            generate_correct(id_val);
+            Q_img.src = "Images/tick.png";
+            // correct_ans++;
+        }
+
+        else if (response.value !== question_answer2[id_val][0]){
+            generate_wrong(id_val, question_answer2);
+        }
+
+    }
+
+    else if (id_val === 'Q3') {
+        let response = document.getElementById("textInput");
+        console.log(response.value);
+
+        if (response.value === ""){
+            alert("Fill in the answer before submitting");
+            return;
+        }
+
+        else if (response.value === question_answer2[id_val][0]){
+            generate_correct(id_val);
+            Q_img.src = "Images/tick.png";
+            // correct_ans++;
+        }
+
+        else if (response.value !== question_answer2[id_val][0]){
+            generate_wrong(id_val, question_answer2);
+        }
+
+    }
+
+    else if (id_val === 'Q5') {
+        let curr_question = "question5";
+        let curr_question_val = document.querySelectorAll('input[name="'+curr_question+'"]:checked');
+
+        if (curr_question_val[0] == null){
+            alert("Fill in the answer before submitting");
+            return;
+        }
+
+        else{
+            if (curr_question_val.length === question_answer2[id_val][0].length) {
+                for (let i = 0; i < curr_question_val.length ; i++) {
+
+                    if (curr_question_val[i].value === question_answer2[id_val][0][i]){
+                        generate_correct(id_val);
+                        Q_img.src = "Images/tick.png";
+                    }
+
+                    // else {
+                    //     generate_wrong(id_val, question_answer2);
+                    // }
+                }
+            }
+
+            else {
+                generate_wrong(id_val, question_answer2)
+            }
+
+        }
     }
 }

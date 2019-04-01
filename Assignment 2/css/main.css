@@ -486,3 +486,41 @@ answered correctly or not*/
 	margin-top: 15px;
 	margin-left: 10px;
 }
+
+/*Styling for the number picker in quiz 3*/
+#number_picker, #dropdown, #text_question, #textInput{
+	width: 300px;
+	height: 30px;
+	padding: 0px 10px;
+	border: 1px solid #c8c8c8;
+	font-family: PT Sans, serif;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+/*Credits: Slider styling was gotten from w3 schools (w3schools.com)*/
+/* Styling for the slider */
+.slider {
+  -webkit-appearance: none; 
+  width: 80%;
+  height: 25px;
+  background: #3498db;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects for the slider */
+.slider:hover {
+  opacity: 1;
+}
+
+/*Styling for slider button*/
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 35px;
+  background: #ff7309;
+  cursor: pointer;
+}

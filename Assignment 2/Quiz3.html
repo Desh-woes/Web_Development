@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <script src="js/main.js"></script>
+    <title>Quiz 3</title>
+</head>
+<body>
+	<!-- Section for the header containing the logo and navigation links-->
+	<header class="header">
+		<!--Div containing logo-->
+		<div>
+			<img src="Images/logo.png" alt="Brand Logo">
+		</div>
+
+		<!--Navigation links in the header-->
+		<div class="navigation">
+			<nav>
+				<a href="Home_page.html">Home Page</a>
+				<a href="View_courses.html">View Courses</a>
+				<a href="Contact_page.html">Contact Us</a>
+			</nav>
+		</div>
+	</header>
+
+	<!-- Section containing the quizes -->
+    <section class="quizContainer">
+    	
+    	<!-- Div containing the quiz title -->
+        <div id="quizTitle">
+        	<h1>Test your understanding of Recursion</h1>
+        </div>
+
+        <!-- Paragraph containing instructions for the quiz -->
+        <p><b>Instructions:</b> This quiz would allow you select only one response which you believe answers the question asked best.</p>
+
+        <!-- Div containing quiz form and solution -->
+        <div class="kwiz">
+        	<form class="quizForm">
+
+	        	<!-- Div containing one quiz question -->
+	        	<div  id ="Q1">
+					<div class="question_mark">
+						<p>What is Recursion?</p>
+						<img src="Images/cancel.png" alt="mark">
+					</div>
+					<label>
+						<input id="number_picker" type="number" name="question1" placeholder="Select a number">
+					</label>
+                	<button type="button" class="button2" name="Submit" onclick="check_response3('Q1')">Check</button>
+	        	</div>
+
+	        	<!-- Div containing question two -->
+	        	<div  id ="Q2">
+	        		<div class="question_mark">
+	        			<p>What is Recursion?</p>
+	        			<img src="Images/cancel.png" alt="mark">
+	        		</div>
+
+                    <label for="dropdown">
+                        <select name="cars" id="dropdown">
+                            <option value="">Select an item from the list</option>
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="fiat">Fiat</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </label>
+                	<button type="button" class="button2" name="Submit" onclick="check_response3('Q2')">Check</button>
+	        	</div>
+
+	        	<!-- Div containing question 3 -->
+	        	<div  id ="Q3">
+	        		<div class="question_mark">
+	        			<p>What is Recursion?</p>
+	        			<img src="Images/cancel.png" alt="mark">
+	        		</div>
+                    <input type="range" name="rangeInput" min="0" max="100" value="20" class="slider" id="myRange" onchange="updateTextInput(this.value);">
+                    <input type="text" id="textInput" value="">
+                	<button type="button" class="button2" name="Submit" onclick="check_response3('Q3')">Check</button>
+	        	</div>
+
+	        	<!-- Div containing question 4 -->
+	        	<div  id ="Q4">
+	        		<div class="question_mark">
+	        			<p>What is Recursion?</p>
+	        			<img src="Images/cancel.png" alt="mark">
+	        		</div>
+
+                    <label for="text_question">
+                        <input id="text_question" type="text" placeholder="Enter answers here">
+                    </label>
+                	<button type="button" class="button2" name="Submit" onclick="check_response3('Q4')">Check</button>
+	        	</div>
+
+	        	<!-- Div containing question 5 -->
+	        	<div  id ="Q5">
+					<div class="question_mark">
+						<p>What is Recursion?</p>
+						<img src="Images/cancel.png" alt="mark" id="i">
+					</div>
+					<label>
+						<input type="checkbox" name="question5" value="a">
+						Recursion is a word coined by Mehdi<br>
+					</label>
+					<label>
+						<input type="checkbox" name="question5" value="b">
+						Recursion is a word coined by Mehdi<br>
+					</label>
+					<label>
+						<input type="checkbox" name="question5" value="c">
+						Recursion is a word coined by Mehdi<br>
+					</label>
+					<label>
+						<input type="checkbox" name="question5" value="d">
+						Recursion is a word coined by Mehdi<br>
+					</label>
+                	<button type="button" class="button2" name="Submit" onclick="check_response3('Q5')">Check</button>
+	        	</div>
+
+	        	<!-- Div containing question 6 -->
+	        	<div  id ="Q6">
+					<div class="question_mark">
+						<p>What is Recursion?</p>
+						<img src="Images/cancel.png" alt="mark" id="img6">
+					</div>
+					<label>
+						<input type="checkbox" name="question6" value="a">
+						Recursion is a word coined by Mehdi<br>
+					</label>
+					<label>
+						<input type="checkbox" name="question6" value="b">
+						Recursion is a word coined by Mehdi<br>
+					</label>
+					<label>
+						<input type="checkbox" name="question6" value="c">
+						Recursion is a word coined by Mehdi<br>
+					</label>
+					<label>
+						<input type="checkbox" name="question6" value="d">
+						Recursion is a word coined by Mehdi<br>
+					</label>
+                	<button type="button" class="button2" name="Submit">Check</button>
+	        	</div>
+
+                <div class="result">
+                    <h4 id="score">Score: </h4>
+                    <h4 id="percentage">Percentage: </h4>
+                    <h4 id="message">Message: </h4>
+                    <button onclick="window.location.href = 'View_courses.html'">Another test</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+	<!-- Footer section containing navigation links and additional details-->
+	<footer>
+		<h5>WEB DEVELOPMENT 2019 &#0169</h5>
+
+		<div>
+			<nav>
+				<a href="Home_page.html">Home Page</a>
+				<a href="View_courses.html">View Courses</a>
+				<a href="Contact_page.html">Contact Us</a>
+			</nav>
+		</div>
+	</footer>
+</body>
+</html>
