@@ -100,11 +100,6 @@ function check_response2(name){
 
     // Check if the answer is correct.
     else if(curr_question_val.value === question_answer[name][0]){
-        // let para = document.createElement("P");
-        // let t = document.createTextNode("You got it right! :)");
-        // para.appendChild(t);
-        // para.style.color = "#30c741";
-        // document.getElementById(name).appendChild(para);
         generate_correct(name);
         Q_img.src = "Images/tick.png";
         correct_ans++;
@@ -112,11 +107,6 @@ function check_response2(name){
 
     // Check if the answer is incorrect and display the neccesary feedback.
     else if(curr_question_val.value !== question_answer[name][0]){
-    	// let para = document.createElement("P");
-        // let t = document.createTextNode(question_answer[name][2]);
-        // para.appendChild(t);
-        // para.style.color = "#c73a26";
-        // document.getElementById(name).appendChild(para);
         generate_wrong(name, question_answer);
     }
 
@@ -161,108 +151,101 @@ function updateTextInput(val) {
 
 // Dictionary containing the answers in quiz3
 question_answer2 = {
-	Q1 : ["41", "question1", "Sorry that was the wrong option. The correct option is a because Timi created it"],
-	Q2 : ["volvo", "question2", "Sorry that was the wrong option. The correct option is a because desh created it"],
-	Q3 : ["Slider value: 50", "question3", "Sorry that was the wrong option. The correct option is a because woes created it"],
-	Q4 : ["Emelyne", "question4", "Sorry that was the wrong option. The correct option is a because shina created it"],
+	Q1 : ["41", "number_picker", "Sorry that was the wrong option. The correct option is a because Timi created it"],
+	Q2 : ["volvo", "dropdown", "Sorry that was the wrong option. The correct option is a because desh created it"],
+	Q3 : ["Slider value: 50", "textInput", "Sorry that was the wrong option. The correct option is a because woes created it"],
+	Q4 : ["Emelyne", "text_question", "Sorry that was the wrong option. The correct option is a because shina created it"],
 	Q5 : [["a", "b"], "question5", "Sorry that was the wrong option. The correct option is a because peters created it"],
-	Q6 : ["b", "question6", "Sorry that was the wrong option. The correct option is a because emelyne created it"]
+	Q6 : [["c", "d"], "question6", "Sorry that was the wrong option. The correct option is a because emelyne created it"]
 };
+
+// Variables to keep track of the number of questions answered correctly and the total number of questions answered.
+let Q_2_ans2 = 0;
+let correct_ans2 = 0;
 
 // Function to check responses for the third quiz.
 function check_response3(id_val){
     // Get Question mark image i.e tick and cancel images respectively
     let Q_img = document.querySelector("#"+id_val+ " img");
 
-	if (id_val === "Q1") {
-	    let response = document.getElementById("number_picker");
+    // Logic to check questions 1 to question 4.
+	if (id_val === "Q1" || id_val === "Q2" || id_val === "Q3" || id_val === "Q4") {
+	    // Get response value
+	    let response = document.getElementById(question_answer2[id_val][1]);
 	    console.log(response.value);
+
+	    // Check if response is not blank
         if (response.value === ""){
             alert("Fill in the answer before submitting");
             return;
         }
 
+        // Check if answer is correct
         else if (response.value === question_answer2[id_val][0]){
             generate_correct(id_val);
             Q_img.src = "Images/tick.png";
-            // correct_ans++;
+            correct_ans2++;
         }
 
+        // Check if answer is wrong and generate feedback
         else if (response.value !== question_answer2[id_val][0]){
             generate_wrong(id_val, question_answer2);
         }
 	}
 
-	else if (id_val === 'Q2') {
-        let response = document.getElementById("dropdown");
-        console.log(response.value);
+	// Logic to check question 5 and 6
+    else if (id_val === 'Q5' || id_val === 'Q6') {
+        // Get input tag
+        let curr_question = question_answer2[id_val][1];
 
-        if (response.value === ""){
-            alert("Fill in the answer before submitting");
-            return;
-        }
-
-        else if (response.value === question_answer2[id_val][0]){
-            generate_correct(id_val);
-            Q_img.src = "Images/tick.png";
-            // correct_ans++;
-        }
-
-        else if (response.value !== question_answer2[id_val][0]){
-            generate_wrong(id_val, question_answer2);
-        }
-
-    }
-
-    else if (id_val === 'Q3') {
-        let response = document.getElementById("textInput");
-        console.log(response.value);
-
-        if (response.value === ""){
-            alert("Fill in the answer before submitting");
-            return;
-        }
-
-        else if (response.value === question_answer2[id_val][0]){
-            generate_correct(id_val);
-            Q_img.src = "Images/tick.png";
-            // correct_ans++;
-        }
-
-        else if (response.value !== question_answer2[id_val][0]){
-            generate_wrong(id_val, question_answer2);
-        }
-
-    }
-
-    else if (id_val === 'Q5') {
-        let curr_question = "question5";
+        // Get all the checked values in that question
         let curr_question_val = document.querySelectorAll('input[name="'+curr_question+'"]:checked');
 
+        // Check if the value is not blank
         if (curr_question_val[0] == null){
             alert("Fill in the answer before submitting");
             return;
         }
 
+        // Check if the correct answers were provided
         else{
+            // Check if the number of selected answers is equal to the number of actual answers
             if (curr_question_val.length === question_answer2[id_val][0].length) {
                 for (let i = 0; i < curr_question_val.length ; i++) {
 
-                    if (curr_question_val[i].value === question_answer2[id_val][0][i]){
-                        generate_correct(id_val);
-                        Q_img.src = "Images/tick.png";
+                    // Check if there is a wrong answer in the selected answers
+                    if (curr_question_val[i].value !== question_answer2[id_val][0][i]){
+                        // Generate feedback for incorrect response
+                        generate_wrong(id_val, question_answer2);
+                        return;
                     }
 
-                    // else {
-                    //     generate_wrong(id_val, question_answer2);
-                    // }
                 }
+                // Generate feedback for correct response
+                generate_correct(id_val);
+                Q_img.src = "Images/tick.png";
+                correct_ans2++;
             }
 
+            // Generate feedback for incorrect responses
             else {
                 generate_wrong(id_val, question_answer2)
             }
 
         }
+    }
+    // Increase the number of questions answered
+    Q_2_ans2++;
+
+    // Disable the submit button
+    document.querySelector("#" + id_val + " .button2").disabled = true;
+    document.querySelector("#" + id_val + " .button2").style.backgroundColor = "#c7c7c7";
+
+    // Display image if correct or wrong
+    Q_img.style.display = "block";
+
+    // Display the result tab if all questions have been answered.
+    if (Q_2_ans2 === 6) {
+        display_result(correct_ans2);
     }
 }
