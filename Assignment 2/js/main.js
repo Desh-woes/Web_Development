@@ -260,7 +260,7 @@ function check_response3(id_val){
                     if (curr_question_val[i].value !== question_answer2[id_val][0][i]){
                         // Generate feedback for incorrect response
                         generate_wrong(id_val, question_answer2);
-                        return;
+                        // return;
                     }
 
                 }
