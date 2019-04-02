@@ -1,3 +1,41 @@
+// Function to change the image of the *recommender* on the home page
+// Creating sideshow for the reccomenders of the platform.
+let iterator = 0;
+
+// Images list containing image file paths that would be used for our slide show
+let images_list = ['Images/reccomendation1.png', 'Images/reccomendation2.jpg'];
+let names_list = ['Adesina Oluwarotimi E', 'Emmanuel Bassey']
+let desc_list = ['I studied using Desh courses to pass my upcoming GRE tests. Studying with Desh courses is very easy with a lot of facilitators ready to help you whenever called upon. It was an extreme pleasure of mine to study with them.', 'Desh courses is a great platform to meet with mentors. I met with a lot of knowledgeable people through the platform and I definitely recommend it for anyone who is interested in preparing for a technical interview.'];
+
+// Variable to keep track of time intervals at which our images would be changing (3 seconds)
+let time = 5000;
+
+// Element variable containing our banner image property
+let img_element = document.querySelector(".reccomendation img");
+
+let name_element = document.querySelector(".reccomendation h2");
+console.log(name_element);
+
+let desc_element = document.querySelector(".reccomendation p");
+
+// Sideshow function that changes the banner image source once called
+function slide_show() {
+    // Set img src to the value of the image at iterator.
+    img_element.src = images_list[iterator];
+    name_element.innerHTML = names_list[iterator];
+    desc_element.innerHTML = desc_list[iterator];
+
+    // Update iterator
+    if (iterator < images_list.length - 1){
+        iterator++;
+    } else {
+        iterator = 0;
+    }
+
+    // Call function once time is due.
+    setTimeout("slide_show()", time);
+}
+
 // Question and answer variables containing the questions and answers_quiz1 for the first quiz.
 let answers_quiz1  = ["a", "b", "c", "d", "a", "b"];
 let question_arr_Q1 = ["question1", "question2", "question3", "question4", "question5", "question6"];
@@ -10,6 +48,17 @@ function check_response() {
     //Count to keep track of the number of correct choices
     let count = 0;
 
+    // Check if all values have been ticked
+    for (let j = 0; j < question_arr_Q1.length; j++) {
+    	let curr_question = question_arr_Q1[j];
+    	// Variable to get the checked box in the current value
+        let curr_question_val = document.querySelector('input[name="'+curr_question+'"]:checked');
+    	if (curr_question_val == null){
+            alert("Please answer all questions before submission");
+            return;
+        }
+    }
+
     // Loop going through the checked value per question, to check if the chosen value is the same as the answer
     for (let i = 0; i < question_arr_Q1.length ; i++) {
         // Variable to store the current question
@@ -21,14 +70,8 @@ function check_response() {
         // Question mark img
         let Q_img = document.getElementById(mark_img[i]);
 
-        // logic to make sure all questions are checked before submission
-        if (curr_question_val == null){
-            alert("Fucking😒😒 answer all questions Idiot");
-            return;
-        }
-
         // Increase count if all questions have been checked and the checked value is correct
-        else if (curr_question_val.value === answers_quiz1[i]){
+        if (curr_question_val.value === answers_quiz1[i]){
             count++;
             Q_img.src = "Images/tick.png";
         }
@@ -55,24 +98,24 @@ function display_result(count){
     document.getElementById("percentage").innerHTML ="Percentage: " + (100 * (count/6)).toFixed()+"%";
     let message_h4 = document.getElementById("message");
     if (count === 6){
-        message_h4.innerHTML = "Message: Well done. Crammer aye. Only you"
+        message_h4.innerHTML = "Message: What a rockstar!"
     }
-    else if (3 < count && count < 6) {
-        message_h4.innerHTML = "Message: You're trying sha. Maybe school is for you afterall"
+    else if (2 < count && count < 6) {
+        message_h4.innerHTML = "Message: You're almost there keep trying!"
     }
     else {
-        message_h4.innerHTML = "Message: You're just an olodo. better go and read. 😂😂";
+        message_h4.innerHTML = "Message: Better go and read. 😂😂";
     }
 }
 
 // Dictionary containing the answers in quiz2
 question_answer = {
-	Q1 : ["a", "question1", "Sorry that was the wrong option. The correct option is a because Timi created it"],
-	Q2 : ["b", "question2", "Sorry that was the wrong option. The correct option is a because desh created it"],
-	Q3 : ["c", "question3", "Sorry that was the wrong option. The correct option is a because woes created it"],
-	Q4 : ["d", "question4", "Sorry that was the wrong option. The correct option is a because shina created it"],
-	Q5 : ["a", "question5", "Sorry that was the wrong option. The correct option is a because peters created it"],
-	Q6 : ["b", "question6", "Sorry that was the wrong option. The correct option is a because emelyne created it"]
+	Q1 : ["a", "question1", "Control structures determine which statements in the program will be executed and in what order, allowing for statements to be skipped over or executed repeatedly. if, if/else, and if/elif/else statements are all examples of control structures that allow for statements to be skipped over or executed conditionally"],
+	Q2 : ["b", "question2", "No specific token denotes the end of a block in Python. In Python, blocks are defined by indentation in accordance with the off-side rule. When a statement occurs on a line which is indented less than the previous one, it indicates the end of a block."],
+	Q3 : ["c", "question3", "Unfortunately, none of our facilitators coined the word recursion."],
+	Q4 : ["d", "question4", "According to global standards, HTML can be defined as an hyper text markup language."],
+	Q5 : ["a", "question5", "The full meaning of CSS is Cascading style sheet."],
+	Q6 : ["b", "question6", "Sorry that was the wrong option. The correct option is Object Oriented programming."]
 };
 
 // Variables to keep track of the number of questions answered correctly and the total number of questions answered.
@@ -151,12 +194,12 @@ function updateTextInput(val) {
 
 // Dictionary containing the answers in quiz3
 question_answer2 = {
-	Q1 : ["41", "number_picker", "Sorry that was the wrong option. The correct option is a because Timi created it"],
-	Q2 : ["volvo", "dropdown", "Sorry that was the wrong option. The correct option is a because desh created it"],
-	Q3 : ["Slider value: 50", "textInput", "Sorry that was the wrong option. The correct option is a because woes created it"],
-	Q4 : ["Emelyne", "text_question", "Sorry that was the wrong option. The correct option is a because shina created it"],
-	Q5 : [["a", "b"], "question5", "Sorry that was the wrong option. The correct option is a because peters created it"],
-	Q6 : [["c", "d"], "question6", "Sorry that was the wrong option. The correct option is a because emelyne created it"]
+	Q1 : ["2", "number_picker", "ALU Rwanda is just two years old"],
+	Q2 : ["volvo", "dropdown", "Sorry, volvo is the only car brand in the list."],
+	Q3 : ["Slider value: 29", "textInput", "Sorry that was the wrong option. More like 29 degrees today."],
+	Q4 : ["Emelyne", "text_question", "The name of your facilitator is Emelyne!!!!"],
+	Q5 : [["a", "b"], "question5", "Missed that sorry! Options a and b are the correct options"],
+	Q6 : [["c", "d"], "question6", "Missed that sorry! Options c and d are the correct options"]
 };
 
 // Variables to keep track of the number of questions answered correctly and the total number of questions answered.
