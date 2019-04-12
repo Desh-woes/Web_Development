@@ -49,13 +49,14 @@
     margin: 15px auto;
 }
 
+/*Styling for the Our products 1 class*/
 .ourProducts1{
     display: grid;
     grid-template-columns: 72% 28%;
-    /*border: 1px solid black;*/
     margin: 0 auto;
 }
 
+/*Styling for the button in the our products1 button*/
 .ourProducts1 button{
     height: 35px;
     border-radius: 5px;
@@ -76,9 +77,6 @@
     display: grid;
     grid-template-columns: 33.3% 33.3% 33.3%;
     margin: 0 auto;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
 }
 
 /* Styling for the value descriptions */
@@ -114,24 +112,20 @@
     font-family: 'Lato', sans-serif;
     font-size: 20px;
     font-weight: 600;
-    padding-bottom: 20px;
-
+    /*padding-bottom: 20px;*/
 }
 
 .card p{
     font-family: 'Lato', sans-serif;
-    /*font-style: italic;*/
 }
 
 /*Styling for the purchase button*/
 .card button {
     border: none;
-    /*outline: 0;*/
     padding: 12px;
     color: white;
     background-color: #606060;
     text-align: center;
-    /*cursor: pointer;*/
     width: 100%;
     font-size: 18px;
 }
