@@ -1,0 +1,99 @@
+/*Styling for the link to book a residence*/
+#bookNow{
+    border: 1px solid black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: black;
+}
+
+/*Styling for the current page*/
+#current{
+    color: black;
+    font-weight: bold;
+}
+
+/*Styling for the home page banner Image*/
+.HomePageBanner img{
+    height: 650px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/*Styling for the booking dropdown*/
+.Booking{
+    /*border: 1px solid black;*/
+    width: 300px;
+    background-color: rgba(235,235,235,0.7);
+    padding: 20px 10px 20px 20px;
+    font-family: 'PT Sans', serif;
+    color: #000000;
+    position: absolute;
+    left: 5vw;
+    top: 18vh;
+}
+
+/*Styling for booking title*/
+.Booking h4{
+    font-weight: lighter;
+    font-size: 24px;
+}
+
+/*Styling for the title of each form input.*/
+.Booking form h5{
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin: 0 auto;
+}
+
+/*Styling for the input box in the booking form*/
+.Booking form input{
+    width: 275px;
+    height: 40px;
+    background-color: #d1d1d1;
+    font-family: 'PT Sans', serif;
+    font-size: 13px;
+    color: #000000;
+    font-weight: 400;
+    margin: 10px 30px 20px 0;
+    padding-left: 10px;
+    /*padding-right: 10px;*/
+}
+
+/*Styling for the date picker*/
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+/*Styling for the date picker icon*/
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    background: url(https://img.icons8.com/metro/26/000000/calendar-11.png)no-repeat;
+    width: 20px;
+    height: 30px;
+    border-width: thin;
+    position: relative;
+    transform: translateY(20%);
+}
+
+/*Styling for the book stay div which contains the number of kids and adults respectively*/
+.bookStay{
+    display: flex;
+}
+
+/*Styling for the input tab in the book stay bar*/
+.bookStay label input{
+    width: 116px;
+    height: 40px;
+}
+
+/*Styling for the booking button*/
+.Booking button{
+    width: 112px;
+    height: 31px;
+    border-radius: 5px;
+    background-color: #4d4d4d;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #ffffff;
+}
